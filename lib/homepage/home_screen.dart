@@ -83,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
         itemCount: db.myNotesList.length,
         itemBuilder: (context, index) {
           // final colors = Colors.accents[index % db.myNotesList.length + 3];
-          final colors = Colors.accents[index % 7 + 3];
+          final colors = Colors.accents[index % 6 + 4];
           return NotesTileWidget(
             colors: colors,
             title: db.myNotesList[index][0],
