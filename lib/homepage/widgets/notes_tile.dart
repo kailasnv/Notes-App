@@ -19,6 +19,7 @@ class NotesTileWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 8, left: 8, right: 8),
       child: Slidable(
+        //slidable used to delete each tiles
         endActionPane: ActionPane(
           motion: const StretchMotion(),
           children: [
@@ -31,6 +32,7 @@ class NotesTileWidget extends StatelessWidget {
           ],
         ),
         child: GestureDetector(
+          //GestureDetector used to open the tile , to read whats inside
           onTap: onTapNotes,
           child: Container(
             width: double.infinity,
@@ -45,6 +47,7 @@ class NotesTileWidget extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 25),
+                  // title of notes
                   child: Text(
                     title,
                     style: const TextStyle(

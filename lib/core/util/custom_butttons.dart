@@ -19,7 +19,7 @@ class CustomButton extends StatelessWidget {
         width: 100,
         decoration: BoxDecoration(
           color: kShowFormItemsColor,
-          borderRadius: BorderRadius.circular(13),
+          borderRadius: BorderRadius.circular(25),
         ),
         child: Center(child: Text(title)),
       ),

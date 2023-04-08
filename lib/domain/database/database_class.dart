@@ -3,12 +3,13 @@ import 'package:hive_flutter/hive_flutter.dart';
 import '../../core/constants.dart';
 
 class MyNotesDatabase {
+  //list for Notes
   List myNotesList = [];
 
   //open the hive database
   final myBox = Hive.box("myBox");
 
-  // if the app opens the first time ever by the user
+  // if the app opens the first time ever by the user , show some initial data
   void showSomeDefaultNotes() {
     myNotesList = [
       ["Write your Notes", "You can write anything here"],
@@ -16,7 +17,7 @@ class MyNotesDatabase {
     ];
   }
 
-  // Load the data from database
+  // Fetch the data from database
   void getDataFromHive() {
     myNotesList = myBox.get(hiveBoxKey);
   }

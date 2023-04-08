@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'glass_morphism.dart';
+import '../../core/util/glass_morphism.dart';
 
 class ReadNotes extends StatelessWidget {
   final String title;
@@ -13,10 +13,11 @@ class ReadNotes extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 70),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(30),
-        /*  Glass Morphism Effect */
         child: SizedBox(
+          // main tile for showing the content of notes
           width: 300,
           height: 700,
+          /*  Glass Morphism Effect */
           child: GlassMorphism(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

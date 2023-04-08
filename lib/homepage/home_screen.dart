@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:notes/core/util/read_notes.dart';
+import 'package:notes/homepage/widgets/read_notes.dart';
 import 'package:notes/domain/database/database_class.dart';
 import 'package:notes/homepage/widgets/notes_tile.dart';
 import 'package:notes/homepage/widgets/show_form.dart';
@@ -24,10 +24,10 @@ class _HomeScreenState extends State<HomeScreen> {
   //
   // a instance of database class
   MyNotesDatabase db = MyNotesDatabase();
+
   /*
    if the app opens for the first time ever show some default data , otherwise load from database
   */
-
   final _myBox = Hive.box('myBox');
   @override
   void initState() {
@@ -82,7 +82,8 @@ class _HomeScreenState extends State<HomeScreen> {
       body: ListView.builder(
         itemCount: db.myNotesList.length,
         itemBuilder: (context, index) {
-          final colors = Colors.accents[index % db.myNotesList.length + 2];
+          // final colors = Colors.accents[index % db.myNotesList.length + 3];
+          final colors = Colors.accents[index % 7 + 3];
           return NotesTileWidget(
             colors: colors,
             title: db.myNotesList[index][0],
@@ -103,7 +104,7 @@ class _HomeScreenState extends State<HomeScreen> {
           );
         },
       ),
-      // add notes button
+      // add new notes button
       floatingActionButton: FloatingActionButton(
         backgroundColor: kAddButtonColor,
         onPressed: () {
