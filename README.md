@@ -13,6 +13,5 @@ This is one of my initial Flutter projects that i have done to learn Flutter and
 
 ## Dependencies Used
     1. hive_flutter   
-            - used to build a local database 
     2. flutter_slidable
-            - used to delete a widget in the ui in  a cool way
+           
